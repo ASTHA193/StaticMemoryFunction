@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class sample
+{
+    static int count;
+    public:
+    void set_count()
+    {
+
+        count=1;
+    }
+    static void show_count()
+    {
+        cout<<"\n count="<<count++;
+    }
+};
+int sample::count=0;
+main()
+{
+    sample sm;
+    sm.set_count();
+    sample::show_count();
+}
